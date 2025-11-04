@@ -130,7 +130,6 @@ Algunas ideas para evolucionar el sistema A.D.A.M. en versiones futuras:
 - 🧠 **Uso de redes neuronales ligeras (CNNs)** para detección facial más precisa.  
 - 🚗 **Reconocimiento de señales de tráfico adicionales** (stop, límite de velocidad, peatones).  
 - 🔊 **Sistema de avisos por voz** en lugar de simples pitidos.  
-- ☁️ **Conexión con servicios en la nube** para registro de alertas y análisis estadístico.
 
 ---
 
