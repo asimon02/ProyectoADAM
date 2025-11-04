@@ -427,7 +427,6 @@ class ADAM:
 
         for (x, y, w, h) in faces:
             roi_gray = gray[y:y+h, x:x+w]
-            
             eyes = self.eye_cascade.detectMultiScale(roi_gray, 1.2, 8, minSize=(20, 20))
             eyes_detected = len(eyes)
             cv2.rectangle(display, (x, y), (x+w, y+h), (0, 255, 255), 2)
@@ -438,7 +437,7 @@ class ADAM:
         #     Lógica de detección
         # =============================
         if eyes_detected == 0:
-            self.f_count_closed += 1
+            self.f_count_closed = min(self.f_threshold, self.f_count_closed + 1)
         else:
             self.f_count_closed = max(0, self.f_count_closed - 1)
 
